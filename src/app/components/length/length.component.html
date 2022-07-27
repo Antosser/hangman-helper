@@ -1,0 +1,10 @@
+<div class="container p-5 text-center">
+  <h3>Word length:</h3>
+
+  <mdb-form-control>
+    <input mdbInput type="number" id="form1" class="form-control" [(ngModel)]="wordLength" />
+    <label mdbLabel class="form-label" for="form1">Word length</label>
+  </mdb-form-control>
+
+  <button type="button" class="btn btn-primary m-2" (click)="continue()" >Continue</button>
+</div>

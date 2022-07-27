@@ -1,0 +1,28 @@
+<div class="container p-5 text-center">
+  <h3>Word:</h3>
+  <input type="text" class="letter" *ngFor="let letter of words.word; let i = index" [(ngModel)]="letter.letter"
+    (keydown)="words.update()">
+
+  <div>
+    <h3>Allowed letters:</h3>
+    <button type="button" class="btn m-1 p-2" *ngFor="let letter of words.alphabet"
+      [class.btn-success]="!words.excludedLetters.includes(letter)"
+      [class.btn-danger]="words.excludedLetters.includes(letter)" (click)="words.flipLetter(letter)">
+      {{letter}}
+    </button>
+  </div>
+
+  <div class="p-3"><button type="button" class="btn btn-primary" (click)="words.calculate()">Calculate</button></div>
+
+  <h4>
+    Best letter: {{words.bestLetter.toUpperCase()}}
+    <button type="button" class="btn btn-danger" (click)="words.exclude(words.bestLetter)">Exclude</button>
+  </h4>
+  <h4>Results: {{words.filteredWords.length}}</h4>
+
+  <div *ngIf="words.filteredWords.length <= 10">
+    <div *ngFor="let word of words.filteredWords">
+      {{word}}
+    </div>
+  </div>
+</div>

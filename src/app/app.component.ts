@@ -1,3 +1,4 @@
+import { WordsService } from './services/words.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hangman-solver';
+
+  constructor() {}
 }

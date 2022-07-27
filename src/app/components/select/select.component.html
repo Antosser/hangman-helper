@@ -1,0 +1,16 @@
+<div class="container p-5 text-center">
+  <h3>Please select a language:</h3>
+  <div class="form-check form-check-inline">
+    <input mdbRadio class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="english" checked="true" (change)="setLang('en')"/>
+    <label class="form-check-label" for="inlineRadio1">English</label>
+  </div>
+
+  <!-- <div class="form-check form-check-inline">
+    <input mdbRadio class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="german" (change)="setLang('de')" />
+    <label class="form-check-label" for="inlineRadio2">German</label>
+  </div> -->
+
+  <div class="p-3">
+    <button type="button" class="btn btn-primary" (click)="continue()">Continue</button>
+  </div>
+</div>
